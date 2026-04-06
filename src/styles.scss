@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #9f0010;
+$secondary-color: #3b8292;
+$ternary-color: #f5c09e;
+$border-color: #101324;
+$hover-primary: #000000;
+$hover-secondary: #ffffff;
+
+// Optional: Define other theme colors
+$background-color: #fafcfc;
+$text-color: #101324;
+
+// Use CSS variables (optional)
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --border-color: #{$border-color};
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.title,
+.description,
+.sub-title {
+  padding: 5px 0;
+}
+
+.leaflet-marker-icon {
+  background: transparent !important;
+}
+
+button {
+  margin: 10px 0px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+button.sidenav-button{
+  display: flex;
+  align-items: center;
+  color: $primary-color;
+  background-color: transparent;
+  border: 0px solid $border-color;
+}
+
+button.primary {
+  background-color: $text-color;
+  color: $background-color;
+  border: 2px solid $border-color;
+}
+
+button.secondary {
+  background-color: $background-color;
+  color: $text-color;
+  margin-left: 10px;
+  border: 2px solid $border-color;
+}
+
+button.ternary {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+button.primary:hover {
+  background-color: $hover-primary;
+}
+
+button.secondary:hover {
+  background-color: $hover-secondary;
+}
+
+button.ternary:hover {
+  text-decoration: underline;
+}
