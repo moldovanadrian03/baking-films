@@ -83,3 +83,24 @@ button.secondary:hover {
 button.ternary:hover {
   text-decoration: underline;
 }
+
+img.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+img.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+img.logo {
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+}

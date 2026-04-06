@@ -1,0 +1,47 @@
+<div id="navbar-container">
+  <section class="navbar-row1">
+    <img
+      class="logo"
+      src="assets/logo_square.png"
+      alt="logo"
+    />
+    @if(isMobileView) {
+      <button
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        class="sidenav-button"
+        (click)="toggleSidenav()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+  }
+  </section>
+  @if(!isMobileView) {
+    <section class="navbar-row2">
+      <ul>
+        <li>
+          Despre noi
+        </li>
+        <li>
+          Contact
+        </li>
+      </ul>
+    </section>
+  }
+  @if(isMobileView && isSidenavOpened) {
+    <div class="backdrop" (click)="toggleSidenav()" ></div>
+
+  }
+  @if(isSidenavOpened) {
+    <section class="sidenav-container">
+      <ul>
+        <li (click)="toggleSidenav()">
+          Despre noi
+        </li>
+        <li (click)="toggleSidenav()">
+          Contact
+        </li>
+      </ul>
+    </section>
+  }
+</div>
