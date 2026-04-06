@@ -12,11 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 export class Navbar implements OnInit{
   isSidenavOpened: boolean = false;
   isMobileView: boolean = false;
-  resizeObserver: ResizeObserver | null = null; // Declare the resizeObserver property
+  resizeObserver: ResizeObserver | null = null;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.updateIsMobileView();
