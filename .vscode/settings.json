@@ -1,3 +1,9 @@
 {
-    "eslint.enable": false
+    "eslint.enable": false,
+    "typescript.tsserver.maxTsServerMemory": 4096,
+    "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true
+  }
+
 }
