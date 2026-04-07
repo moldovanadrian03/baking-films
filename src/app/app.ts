@@ -13,4 +13,8 @@ import { CardsSection } from "./components/cards-section/cards-section";
 })
 export class App {
   protected readonly title = signal('baking-films');
+
+  ABOUT_SECTION = 'about-section';
+  CARDS_SECTION = 'cards-section';
+  FOOTER_SECTION = 'footer-section';
 }

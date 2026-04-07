@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { INSTAGRAM, FACEBOOK, scrollToElementById, ABOUT_SECTION, CARDS_SECTION, FOOTER_SECTION } from '../../utils';
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss',
 })
 export class Footer {
-INSTAGRAM: string = 'https://www.instagram.com/baking.films/';
-FACEBOOK: string = 'https://www.facebook.com/p/Baking-Films-61561806923938/';
 
   openLink(url: string): void {
     window.open(url, '_blank');
   }
+
+  scrollToById(element: string): void {
+    scrollToElementById(element);
+  }
+
+  ABOUT_SECTION = ABOUT_SECTION;
+  CARDS_SECTION = CARDS_SECTION;
+  FOOTER_SECTION = FOOTER_SECTION;
+  FACEBOOK = FACEBOOK;
+  INSTAGRAM = INSTAGRAM;
 }
