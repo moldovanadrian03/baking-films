@@ -1,0 +1,13 @@
+<div class="carousel-container">
+  <!-- Rândul 1: dreapta -> stânga -->
+  <div class="carousel-track track1">
+    <img *ngFor="let image of images" [src]="image" alt="slide" />
+    <img *ngFor="let image of images" [src]="image" alt="slide" />
+  </div>
+
+  <!-- Rândul 2: stânga -> dreapta -->
+  <div class="carousel-track track2">
+    <img *ngFor="let image of images" [src]="image" alt="slide" />
+    <img *ngFor="let image of images" [src]="image" alt="slide" />
+  </div>
+</div>

@@ -104,3 +104,9 @@ img.logo {
   margin: 10px;
   cursor: pointer;
 }
+
+li {
+  &:hover {
+    color: var(--primary-color);
+  }
+}

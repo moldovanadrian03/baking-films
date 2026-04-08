@@ -1,0 +1,87 @@
+/* Container full screen */
+.carousel-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 200%;
+  position: relative;
+}
+
+.carousel-track img {
+  width: auto;
+  height: 30vh;       /* dimensiune desktop */
+  margin-right: -50px; /* suprapunere ușoară */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease, z-index 0s ease;
+  z-index: 1;
+}
+
+/* Hover: mărire și evidențiere */
+.carousel-track img:hover {
+  transform: scale(1.15);
+  z-index: 10;           /* scoate imaginea deasupra celorlalte */
+  filter: blur(0);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Imaginile care nu sunt hover */
+.carousel-track img:not(:hover) {
+  filter: blur(1px);
+  opacity: 0.85;
+}
+
+/* Rânduri opuse */
+.track1 {
+  animation: scroll-left 25s linear infinite;
+  z-index: 2;
+}
+.track2 {
+  animation: scroll-right 30s linear infinite;
+  z-index: 1;
+}
+
+/* Animații scroll lateral */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .carousel-track img {
+    height: 25vh;
+    margin-right: -40px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-track img {
+    height: 20vh;
+    margin-right: -30px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-track img {
+    height: 15vh;
+    margin-right: -20px;
+  }
+  .carousel-container {
+    gap: 10px;
+  }
+}
+

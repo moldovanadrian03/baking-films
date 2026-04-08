@@ -30,6 +30,7 @@
 			align-items: center;
 			list-style: none;
 		}
+
     &:hover {
       cursor: pointer;
     }
@@ -70,6 +71,7 @@
 				transform: translateX(0); // slide from left
 				animation: slideInListItem 0.2s ease-out forwards;
 				animation-delay: calc(var(--li-index) * 0.1s); // stagger delay for each item
+
 
 				@keyframes slideInListItem {
 					to {
