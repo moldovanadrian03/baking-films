@@ -1,9 +1,32 @@
 <section class="cards-section">
   <div class="container" @cardsAnimation>
-    <div class="card" *ngFor="let card of cards">
+    <div class="card" *ngFor="let card of cards" (click)="openModal(card)" [@slideInLeft]>
       <img [src]="card.image" alt="{{ card.title }}" />
       <h3>{{ card.title }}</h3>
-      <p>{{ card.description }}</p>
+      <p>
+        {{ card.description | slice:0:100 }}
+        <span *ngIf="card.description.length > 100">
+          ... <a (click)="openModal(card); $event.preventDefault()">See more</a>
+        </span>
+      </p>
     </div>
   </div>
 </section>
+
+<!-- // Modal for card details -->
+<div class="modal-backdrop" *ngIf="selectedCard as card" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <button class="close-btn" (click)="closeModal()">✕</button>
+
+    <div class="modal-image">
+      <img [src]="card.image" alt="{{ card.title }}" />
+    </div>
+
+    <div class="modal-content">
+      <h2>{{ card.title }}</h2>
+      <p>{{ card.description }}</p>
+    </div>
+
+  </div>
+</div>
