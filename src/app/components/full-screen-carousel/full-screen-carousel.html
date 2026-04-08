@@ -1,13 +1,33 @@
-<div class="carousel-container">
-  <!-- Rândul 1: dreapta -> stânga -->
-  <div class="carousel-track track1">
-    <img *ngFor="let image of images" [src]="image" alt="slide" />
-    <img *ngFor="let image of images" [src]="image" alt="slide" />
-  </div>
+<section class="carousel-section">
+  <div class="carousel-container">
+    <div class="carousel-track track1">
+      <img *ngFor="let movie of movies1" [src]="movie.image" alt="slide" (click)="openModal(movie)"/>
+      <img *ngFor="let movie of movies1" [src]="movie.image" alt="slide" (click)="openModal(movie)"/>
+    </div>
 
-  <!-- Rândul 2: stânga -> dreapta -->
-  <div class="carousel-track track2">
-    <img *ngFor="let image of images" [src]="image" alt="slide" />
-    <img *ngFor="let image of images" [src]="image" alt="slide" />
+    <div class="carousel-track track2">
+      <img *ngFor="let movie of movies2" [src]="movie.image" alt="slide" (click)="openModal(movie)"/>
+      <img *ngFor="let movie of movies2" [src]="movie.image" alt="slide" (click)="openModal(movie)"/>
+    </div>
+  </div>
+</section>
+
+<div class="modal-backdrop" *ngIf="selectedMovie as movie" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <button class="close-btn" (click)="closeModal()">✕</button>
+
+    <div class="modal-body">
+      <div class="modal-image">
+        <img [src]="movie.image" [alt]="movie.title" />
+      </div>
+
+      <div class="modal-content">
+        <h2>{{ movie.title || 'Untitled' }}</h2>
+        <p>{{ movie.description }}</p>
+      </div>
+    </div>
+
   </div>
 </div>
+

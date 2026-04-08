@@ -11,15 +11,12 @@
     display: grid;
     gap: 20px;
 
-    // Mobile (default)
     grid-template-columns: 1fr;
 
-    // Tablet
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    // Desktop
     @media (min-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -51,9 +48,8 @@
       font-size: 0.95rem;
       opacity: 0.8;
 
-      /* 🔹 TRUNCATE TEXT & SEE MORE */
       display: -webkit-box;
-      -webkit-line-clamp: 3; /* numărul de rânduri vizibile */
+      -webkit-line-clamp: 3; /* no. of rows */
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -128,10 +124,9 @@
   }
 }
 
-/* 📜 CONTENT */
 .modal-content {
-  flex: 1; // 🔥 ocupă restul spațiului
-  overflow-y: auto; // 🔥 scroll DOAR aici
+  flex: 1;
+  overflow-y: auto;
   padding: 20px;
 
   h2 {
@@ -144,7 +139,6 @@
   }
 }
 
-/* ❌ CLOSE BUTTON */
 .close-btn {
   position: absolute;
   top: 12px;
@@ -158,11 +152,9 @@
   cursor: pointer;
 }
 
-/* 📱 MOBILE */
 @media (max-width: 600px) {
   .modal {
     border-radius: 12px;
-    // height: 60vh; // 🔥 mai mult spațiu pe mobil
   }
 
   .modal-image {
@@ -170,21 +162,18 @@
   }
 }
 
-/* 📲 TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
   .modal {
     max-width: 600px;
   }
 }
 
-/* 💻 DESKTOP */
 @media (min-width: 1025px) {
   .modal {
     max-width: 700px;
   }
 }
 
-/* ✨ ANIMATIONS */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
