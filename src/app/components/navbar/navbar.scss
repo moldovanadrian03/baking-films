@@ -20,6 +20,12 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 	}
 
 	.navbar-row2 {

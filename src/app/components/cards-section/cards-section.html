@@ -1,4 +1,5 @@
 <section class="cards-section">
+  <h1 class="section-title">Cunoaște echipa</h1>
   <div class="container" @cardsAnimation>
     <div class="card" *ngFor="let card of cards" (click)="openModal(card)" [@slideInLeft]>
       <img [src]="card.image" alt="{{ card.title }}" />

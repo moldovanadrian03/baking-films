@@ -14,6 +14,7 @@ export function scrollToElementById(element: string): void {
 
 export const ABOUT_SECTION = 'about-section';
 export const FOOTER_SECTION = 'footer-section';
+export const CAROUSEL_SECTION = 'carousel-section';
 export const CARDS_SECTION = 'cards-section';
 
 export const FACEBOOK = 'https://www.facebook.com/p/Baking-Films-61561806923938/';

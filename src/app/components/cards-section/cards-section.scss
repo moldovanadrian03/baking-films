@@ -1,6 +1,12 @@
 .cards-section {
   padding: 40px 20px;
+  text-align: center;
 
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
   .container {
     display: grid;
     gap: 20px;
@@ -15,7 +21,7 @@
 
     // Desktop
     @media (min-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -82,7 +88,7 @@
   justify-content: center;
 
   padding: 20px;
-  z-index: 1000;
+  z-index: 10000;
 
   animation: fadeIn 0.3s ease;
 }
@@ -96,7 +102,7 @@
   width: 100%;
   max-width: 700px;
 
-  height: 60vh;
+  height: 90vh;
 
   display: flex;
   flex-direction: column;

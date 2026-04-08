@@ -4,6 +4,7 @@
       class="logo"
       src="assets/logo_square.png"
       alt="logo"
+      (click)="scrollToById(CAROUSEL_SECTION)"
     />
     @if(isMobileView) {
       <button
@@ -25,6 +26,9 @@
         <li (click)="scrollToById(CARDS_SECTION)">
           Echipa
         </li>
+        <li (click)="scrollToById(CAROUSEL_SECTION)">
+          Catalog
+        </li>
         <li (click)="scrollToById(FOOTER_SECTION)">
           Contact
         </li>
@@ -43,6 +47,9 @@
         </li>
         <li (click)="toggleSidenav()" (click)="scrollToById(CARDS_SECTION)">
           Echipa
+        </li>
+        <li (click)="toggleSidenav()" (click)="scrollToById(CAROUSEL_SECTION)">
+          Catalog
         </li>
         <li (click)="toggleSidenav()" (click)="scrollToById(FOOTER_SECTION)">
           Contact
