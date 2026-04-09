@@ -21,15 +21,19 @@
     <section class="navbar-row2">
       <ul>
         <li (click)="scrollToById(ABOUT_SECTION)">
+          <img class="cherry" *ngIf="activeSection === ABOUT_SECTION" src="assets/cherry.png" />
           Despre noi
         </li>
         <li (click)="scrollToById(CARDS_SECTION)">
+          <img class="cherry" *ngIf="activeSection === CARDS_SECTION" src="assets/cherry.png" />
           Echipa
         </li>
         <li (click)="scrollToById(CAROUSEL_SECTION)">
+          <img class="cherry" *ngIf="activeSection === CAROUSEL_SECTION" src="assets/cherry.png" />
           Catalog
         </li>
         <li (click)="scrollToById(FOOTER_SECTION)">
+          <img class="cherry" *ngIf="activeSection === FOOTER_SECTION" src="assets/cherry.png" />
           Contact
         </li>
       </ul>
@@ -42,16 +46,20 @@
   @if(isSidenavOpened) {
     <section class="sidenav-container">
       <ul>
-        <li (click)="toggleSidenav()" (click)="scrollToById(ABOUT_SECTION)">
+        <li (click)="toggleSidenav(); scrollToById(ABOUT_SECTION)">
+          <img class="cherry" *ngIf="activeSection === ABOUT_SECTION" src="assets/cherry.png" />
           Despre noi
         </li>
-        <li (click)="toggleSidenav()" (click)="scrollToById(CARDS_SECTION)">
+        <li (click)="toggleSidenav(); scrollToById(CARDS_SECTION)">
+          <img class="cherry" *ngIf="activeSection === CARDS_SECTION" src="assets/cherry.png" />
           Echipa
         </li>
-        <li (click)="toggleSidenav()" (click)="scrollToById(CAROUSEL_SECTION)">
+        <li (click)="toggleSidenav(); scrollToById(CAROUSEL_SECTION)">
+          <img class="cherry" *ngIf="activeSection === CAROUSEL_SECTION" src="assets/cherry.png" />
           Catalog
         </li>
-        <li (click)="toggleSidenav()" (click)="scrollToById(FOOTER_SECTION)">
+        <li (click)="toggleSidenav(); scrollToById(FOOTER_SECTION)">
+          <img class="cherry" *ngIf="activeSection === FOOTER_SECTION" src="assets/cherry.png" />
           Contact
         </li>
       </ul>

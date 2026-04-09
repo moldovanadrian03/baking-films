@@ -35,6 +35,18 @@
 			justify-content: space-around;
 			align-items: center;
 			list-style: none;
+
+      li {
+      display: flex;
+      flex-direction: row;
+
+        .cherry {
+          width: 10px;
+          height: auto;
+          margin-right: 10px;
+          animation: fadeSlideIn 0.3s ease forwards;
+        }
+      }
 		}
 
     &:hover {
@@ -78,6 +90,15 @@
 				animation: slideInListItem 0.2s ease-out forwards;
 				animation-delay: calc(var(--li-index) * 0.1s);
 
+        display: flex;
+        flex-direction: row;
+
+        .cherry {
+          width: 10px;
+          height: auto;
+          margin-right: 10px;
+          animation: fadeSlideIn 0.3s ease forwards;
+        }
 
 				@keyframes slideInListItem {
 					to {
@@ -115,4 +136,15 @@
 	width: 100vw;
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 10;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
