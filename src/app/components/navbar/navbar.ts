@@ -29,12 +29,9 @@ export class Navbar implements OnInit, AfterViewInit{
   }
 
    ngAfterViewInit(): void {
-    this.onScroll(); // setăm secțiunea inițială
+    this.onScroll();
   }
 
-
-  // 🔥 NOU: scroll spy
-  @HostListener('window:scroll', [])
 @HostListener('window:scroll', [])
 onScroll() {
   const sections = [
@@ -47,7 +44,7 @@ onScroll() {
   const scrollPosition = window.innerHeight + window.scrollY;
   const pageHeight = document.documentElement.scrollHeight;
 
-  // 🔥 detectare footer la final
+  //detectare footer
   if (scrollPosition >= pageHeight - 50) {
     if (this.activeSection !== this.FOOTER_SECTION) {
       this.activeSection = this.FOOTER_SECTION;
@@ -55,8 +52,7 @@ onScroll() {
     return;
   }
 
-  // 🔹 offset ca procent din viewport
-  const offset = window.innerHeight * 0.2; // 20% din susul viewport-ului
+  const offset = window.innerHeight * 0.2;
 
   for (let id of sections) {
     const el = document.getElementById(id);
@@ -64,7 +60,6 @@ onScroll() {
 
     const rect = el.getBoundingClientRect();
 
-    // dacă secțiunea intră în viewport peste offset
     if (rect.top <= offset && rect.bottom >= offset) {
       if (this.activeSection !== id) {
         this.activeSection = id;
