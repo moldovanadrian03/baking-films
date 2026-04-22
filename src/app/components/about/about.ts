@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { slideInLeft, slideInRight } from '../../animations/slide.animations';
-import { CARDS_SECTION, scrollToElementById } from '../../utils';
+import { CARDS_SECTION, scrollToElementById, CAROUSEL_SECTION } from '../../utils';
 
 @Component({
   selector: 'app-about',
@@ -18,4 +18,5 @@ export class About {
   }
 
   CARDS_SECTION = CARDS_SECTION;
+  CAROUSEL_SECTION = CAROUSEL_SECTION;
 }

@@ -40,7 +40,7 @@
 }
 
 .track1 {
-  animation: scroll-left 60s linear infinite;
+  animation: scroll-left 50s linear infinite;
   z-index: 2;
 }
 .track2 {
@@ -63,17 +63,44 @@
     height: 25vh;
     margin-right: -40px;
   }
+
+  .track1 {
+    animation: scroll-left 50s linear infinite;
+    z-index: 2;
+  }
+  .track2 {
+    animation: scroll-right 60s linear infinite;
+    z-index: 1;
+  }
 }
 @media (max-width: 768px) {
   .carousel-track img {
     height: 20vh;
     margin-right: -30px;
   }
+
+  .track1 {
+    animation: scroll-left 30s linear infinite;
+    z-index: 2;
+  }
+  .track2 {
+    animation: scroll-right 40s linear infinite;
+    z-index: 1;
+  }
 }
 @media (max-width: 480px) {
   .carousel-track img {
-    height: 15vh;
+    height: 30vh;
     margin-right: -20px;
+  }
+
+  .track1 {
+    animation: scroll-left 10s linear infinite;
+    z-index: 2;
+  }
+  .track2 {
+    animation: scroll-right 20s linear infinite;
+    z-index: 1;
   }
   .carousel-container {
     gap: 10px;
