@@ -1,53 +1,49 @@
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, style, animate, transition, state } from '@angular/animations';
 
 export const slideInLeft = trigger('slideInLeft', [
-  transition(':enter', [
-    style({
-      transform: 'translateX(-30px)',
-      opacity: 0
-    }),
-    animate('600ms ease-out', style({
-      transform: 'translateX(0)',
-      opacity: 1
-    }))
-  ])
+  state('hidden', style({
+    transform: 'translateX(-30px)',
+    opacity: 0
+  })),
+  state('visible', style({
+    transform: 'translateX(0)',
+    opacity: 1
+  })),
+  transition('hidden => visible', animate('600ms ease-out'))
 ]);
 
 export const slideInRight = trigger('slideInRight', [
-  transition(':enter', [
-    style({
-      transform: 'translateX(30px)',
-      opacity: 0
-    }),
-    animate('600ms ease-out', style({
-      transform: 'translateX(0)',
-      opacity: 1
-    }))
-  ])
+  state('hidden', style({
+    transform: 'translateX(30px)',
+    opacity: 0
+  })),
+  state('visible', style({
+    transform: 'translateX(0)',
+    opacity: 1
+  })),
+  transition('hidden => visible', animate('600ms ease-out'))
 ]);
 
 export const slideInUp = trigger('slideInUp', [
-  transition(':enter', [
-    style({
-      transform: 'translateY(30px)',
-      opacity: 0
-    }),
-    animate('600ms ease-out', style({
-      transform: 'translateY(0)',
-      opacity: 1
-    }))
-  ])
+  state('hidden', style({
+    transform: 'translateY(30px)',
+    opacity: 0
+  })),
+  state('visible', style({
+    transform: 'translateY(0)',
+    opacity: 1
+  })),
+  transition('hidden => visible', animate('600ms ease-out'))
 ]);
 
 export const slideInDown = trigger('slideInDown', [
-  transition(':enter', [
-    style({
-      transform: 'translateY(-30px)',
-      opacity: 0
-    }),
-    animate('600ms ease-out', style({
-      transform: 'translateY(0)',
-      opacity: 1
-    }))
-  ])
+  state('hidden', style({
+    transform: 'translateY(-30px)',
+    opacity: 0
+  })),
+  state('visible', style({
+    transform: 'translateY(0)',
+    opacity: 1
+  })),
+  transition('hidden => visible', animate('600ms ease-out'))
 ]);
