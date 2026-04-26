@@ -6,7 +6,7 @@ import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, Output } fro
 })
 export class AnimateOnScroll implements AfterViewInit {
   @Output() visible = new EventEmitter<void>();
-  @Input() threshold: number = 0.5;
+  @Input() threshold: number = 1;
 
   constructor(private el: ElementRef) {}
 

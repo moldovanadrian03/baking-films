@@ -4,14 +4,16 @@ import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { cardAnimations } from '../../animations/cards.animations';
 import { slideInLeft, slideInRight } from '../../animations/slide.animations';
 import { CARDS } from '../../utils';
+import { AnimateOnScroll } from "../../animate-on-scroll";
 
 @Component({
   selector: 'app-cards-section',
   imports: [
     NgFor,
     NgIf,
-    SlicePipe
-  ],
+    SlicePipe,
+    AnimateOnScroll
+],
   templateUrl: './cards-section.html',
   styleUrl: './cards-section.scss',
   animations: [
@@ -23,8 +25,8 @@ import { CARDS } from '../../utils';
 export class CardsSection {
 
   cards = CARDS;
-
   selectedCard: Card | null = null;
+  isVisible: boolean = false;
 
   openModal(card: Card): void {
     this.selectedCard = card;

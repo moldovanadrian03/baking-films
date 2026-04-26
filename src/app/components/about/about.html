@@ -1,4 +1,8 @@
-<section class="container">
+<section
+  class="container"
+  appAnimateOnScroll
+  (visible)="isVisible = true"
+  [@slideInDown]="isVisible ? 'visible' : 'hidden'">
   <div class="info-container" @slideInLeft>
     <h1 class="title">Baking Films</h1>
     <p class="description">

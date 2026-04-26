@@ -1,7 +1,7 @@
 <section class="cards-section">
   <h1 class="section-title">Cunoaște echipa</h1>
-  <div class="container" @cardsAnimation>
-    <div class="card" *ngFor="let card of cards" (click)="openModal(card)" [@slideInLeft]>
+  <div class="container">
+    <div class="card" *ngFor="let card of cards" (click)="openModal(card)" appAnimateOnScroll (visible)="isVisible = true" [@slideInLeft]="isVisible ? 'visible' : 'hidden'">
       <img [src]="card.image" alt="{{ card.title }}" />
       <h3>{{ card.title }}</h3>
       <p>
