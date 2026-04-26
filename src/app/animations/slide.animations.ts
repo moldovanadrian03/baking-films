@@ -38,3 +38,16 @@ export const slideInUp = trigger('slideInUp', [
     }))
   ])
 ]);
+
+export const slideInDown = trigger('slideInDown', [
+  transition(':enter', [
+    style({
+      transform: 'translateY(-30px)',
+      opacity: 0
+    }),
+    animate('600ms ease-out', style({
+      transform: 'translateY(0)',
+      opacity: 1
+    }))
+  ])
+]);

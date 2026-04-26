@@ -32,8 +32,8 @@ export class Navbar implements OnInit, AfterViewInit{
     this.onScroll();
   }
 
-@HostListener('window:scroll', [])
-onScroll() {
+  @HostListener('window:scroll', [])
+  onScroll() {
   const sections = [
     this.ABOUT_SECTION,
     this.CARDS_SECTION,
@@ -67,7 +67,7 @@ onScroll() {
       break;
     }
   }
-}
+  }
 
   @HostListener('window:resize', ['$event'])
   onWindowResize(event: Event) {
